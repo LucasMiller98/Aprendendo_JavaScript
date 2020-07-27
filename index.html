@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge, chrome=1">
     <link rel="shortcup icon" href="img/1_6ahbWjp_g9hqhaTDSJOL1Q.png">
     <script src="js/main.js"></script>
+    <script src="js/linkJS.js"></script>
+    <script src="js/onmouse.js"></script>
     <title>Aprendendo JavaScript</title>
     <style>
         header{
@@ -30,7 +32,8 @@
         }
     </style>
 </head>
-<body>
+<!-- Quando o body carregar, iremos chamar uma function -->
+<body onload="load()">
     <header>
         <h1>Aprendendo JavaScript</h1>
     </header>
@@ -43,6 +46,22 @@
         <div id="res">
 
         </div>
+        <p>
+            <button onclick="link()">
+                Clique aqui para abrir o youtube
+            </button>
+        </p>
+        <!-- Para passar o proprio elemento, usamos o this -->
+        <p id="imagem" onmouseover="verImg(this)" onmouseout="esconderImg(this)"> 
+            Veja a img 
+        </p>
+        <!-- teste com o change -->
+        <!-- Com o onchange ele vai coletar o valor que ele ta pegando -->
+        <select onchange="change(this)">
+            <option value="1">--Escolha uma opção</option>
+            <option value="2">Valor 2</option>
+            <option value="3">Valor 3</option>
+        </select>
     </main>
 </body>
 </html>
